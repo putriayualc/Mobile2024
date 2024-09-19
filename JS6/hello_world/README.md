@@ -1,16 +1,27 @@
-# hello_world
+Nama    : Putri Ayu Aliciawati      
+Kelas   : TI-3C     
+NIM     : 2241720132        
 
-A new Flutter project.
+# Praktikum 1
+## Langkah 1     
+![alt text](images/image.png)      
+## Langkah 2
+![alt text](images/image-1.png)        
+## Langkah 3        
+![alt text](images/image-2.png)        
+## Langkah 4        
+![alt text](images/image-3.png)
 
-## Getting Started
+# Praktikum 2
+## Langkah 11
+![alt text](images/01.png)     
+## Langkah 12       
+![alt text](images/02.png)      
 
-This project is a starting point for a Flutter application.
+# Praktikum 3       
+## Langkah 1        
+![alt text](images/prak3_01.png)        
+## Langkah 2        
+![alt text](images/prak3_02.png)        
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
