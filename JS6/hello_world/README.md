@@ -24,4 +24,16 @@ NIM     : 2241720132
 ## Langkah 2        
 ![alt text](images/prak3_02.png)        
 
-
+# Praktikum 4
+## Langkah 1, 2, 3
+![alt text](images/Prak4_1,2,3.png)     
+## Langkah 4        
+![alt text](images/prak4_4(1).png)      
+![alt text](images/prak4_4(2).png)      
+## Langkah 5        
+![alt text](images/prak4_5(1).png)      
+![alt text](images/prak4_5(2).png)      
+## Langkah 6        
+![alt text](images/prak4_6(1).png)      
+![alt text](images/prak4_6(2).png)        
+![alt text](images/prak4_6(3).png)
