@@ -48,4 +48,11 @@ Ketika di klik akan berpindah ke halaman Item Detail.
 3. Menambah foto, stok, dan rating :  
 ![alt text](images/soal3.png)  
 
-4. 
+4. Home page :  
+![alt text](images/soal4(1).png)  
+Item Page :  
+![alt text](images/soal4(2).png)   
+Hasil running :
+![alt text](images/soal4.gif)
+
+5. 
