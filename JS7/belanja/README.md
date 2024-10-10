@@ -41,3 +41,11 @@ Ketika di klik akan berpindah ke halaman Item Detail.
 
 
 # Tugas Praktikum 2  
+1. `Navigator.pushNamed(context, '/item', arguments: item);`   Baris kode Navigator.pushNamed(context, '/item', arguments: item); digunakan untuk menavigasi dari satu halaman ke halaman lain dalam aplikasi Flutter menggunakan named route. Fungsi ini mengambil tiga argumen: context, yang merujuk pada konteks widget saat ini; '/item', yang merupakan identifikasi untuk halaman tujuan (dalam hal ini, ItemPage); dan arguments: item, yang mengirimkan objek item sebagai data tambahan ke halaman yang dituju.
+
+2. `final Item item = ModalRoute.of(context)!.settings.arguments as Item;` Pembacaan nilai yang dikirimkan pada halaman sebelumnya dapat dilakukan menggunakan ModalRoute.
+
+3. Menambah foto, stok, dan rating :  
+![alt text](images/soal3.png)  
+
+4. 
