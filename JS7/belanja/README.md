@@ -52,7 +52,14 @@ Ketika di klik akan berpindah ke halaman Item Detail.
 ![alt text](images/soal4(1).png)  
 Item Page :  
 ![alt text](images/soal4(2).png)   
-Hasil running :
+Hasil running :  
 ![alt text](images/soal4.gif)
 
-5. 
+5. Hasil modifikasi :  
+![alt text](images/soal5(1).png)    
+![alt text](images/soal5(3).png)  
+Saya membagi menjadi 2 file widget terpisah yaitu :  
+Footer  
+![alt text](images/soal5(2).png)  
+itemCard  
+![alt text](images/soal5(4).png)

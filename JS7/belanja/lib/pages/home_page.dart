@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../models/item.dart'; // Impor model Item
+import '../models/item.dart';
+import '../widgets/itemCard.dart';
+import '../widgets/footer.dart';
 
 class HomePage extends StatelessWidget {
   final List<Item> items = [
@@ -33,56 +35,24 @@ class HomePage extends StatelessWidget {
         title: Text('Home Page'),
       ),
       body: SafeArea(
-        child: GridView.builder(
-          padding: EdgeInsets.all(8),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, // Jumlah kolom
-            crossAxisSpacing: 8,
-            mainAxisSpacing: 8,
-          ),
-          itemCount: items.length,
-          itemBuilder: (context, index) {
-            final item = items[index];
-            return InkWell(
-              onTap: () {
-                Navigator.pushNamed(
-                  context,
-                  '/item',
-                  arguments: item,
-                );
-              },
-              child: Card(
-                elevation: 4,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Hero(
-                      tag: item.imageUrl, // Unik untuk setiap item
-                      child: Image.network(
-                        item.imageUrl,
-                        height: 100,
-                        width: double.infinity,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            item.name,
-                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                          ),
-                          Text('Rp${item.price}'),
-                        ],
-                      ),
-                    ),
-                  ],
+        child: Column(
+          children: [
+            Expanded(
+              child: GridView.builder(
+                padding: EdgeInsets.all(8),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2, // Jumlah kolom
+                  crossAxisSpacing: 8,
+                  mainAxisSpacing: 8,
                 ),
+                itemCount: items.length,
+                itemBuilder: (context, index) {
+                  return ItemCard(item: items[index]);
+                },
               ),
-            );
-          },
+            ),
+            Footer(), // Tambahkan Footer di bawah
+          ],
         ),
       ),
     );
