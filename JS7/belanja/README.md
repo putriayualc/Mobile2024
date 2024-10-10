@@ -63,3 +63,12 @@ Footer
 ![alt text](images/soal5(2).png)  
 itemCard  
 ![alt text](images/soal5(4).png)
+
+6. Install :  
+![alt text](images/soal6(1).png)  
+Main :  
+![alt text](image.png)  
+home :  
+![alt text](images/soal6(3).png)  
+item page :  
+![](images/soal6(4).png)

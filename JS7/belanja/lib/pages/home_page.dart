@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../models/item.dart';
-import '../widgets/itemCard.dart';
-import '../widgets/footer.dart';
 
 class HomePage extends StatelessWidget {
   final List<Item> items = [
@@ -35,24 +34,58 @@ class HomePage extends StatelessWidget {
         title: Text('Home Page'),
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: GridView.builder(
-                padding: EdgeInsets.all(8),
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, // Jumlah kolom
-                  crossAxisSpacing: 8,
-                  mainAxisSpacing: 8,
+        child: GridView.builder(
+          padding: EdgeInsets.all(8),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            crossAxisSpacing: 8,
+            mainAxisSpacing: 8,
+          ),
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            final item = items[index];
+            return InkWell(
+              onTap: () {
+                context.go('/item', extra: item); // Navigasi menggunakan go_router
+              },
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
                 ),
-                itemCount: items.length,
-                itemBuilder: (context, index) {
-                  return ItemCard(item: items[index]);
-                },
+                elevation: 4,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Hero(
+                      tag: item.imageUrl,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
+                        child: Image.network(
+                          item.imageUrl,
+                          height: 100,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            item.name,
+                            style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                          Text('Rp${item.price}'),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Footer(), // Tambahkan Footer di bawah
-          ],
+            );
+          },
         ),
       ),
     );

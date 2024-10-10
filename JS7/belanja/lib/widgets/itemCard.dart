@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import '../models/item.dart';
 
 class ItemCard extends StatelessWidget {
@@ -10,7 +11,8 @@ class ItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, '/item', arguments: item);
+        // Menggunakan context.go() untuk navigasi ke halaman item
+        context.go('/item', extra: item);
       },
       child: Card(
         shape: RoundedRectangleBorder(
@@ -26,26 +28,24 @@ class ItemCard extends StatelessWidget {
                 borderRadius: BorderRadius.vertical(top: Radius.circular(15)),
                 child: Image.network(
                   item.imageUrl,
-                  height: 100, // Ukuran gambar diubah untuk menghindari overflow
+                  height: 120,
                   width: double.infinity,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            Expanded( // Menggunakan Expanded agar tidak melebihi batas
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      item.name,
-                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-                    ),
-                    SizedBox(height: 4),
-                    Text('Rp${item.price}'),
-                  ],
-                ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    item.name,
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 4),
+                  Text('Rp${item.price}'),
+                ],
               ),
             ),
           ],

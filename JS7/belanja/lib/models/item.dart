@@ -1,9 +1,9 @@
 class Item {
   final String name;
-  final double price;
-  final String imageUrl; // Atribut baru untuk foto produk
-  final int stock;       // Atribut baru untuk stok
-  final double rating;   // Atribut baru untuk rating
+  final int price;
+  final String imageUrl;
+  final int stock;
+  final double rating;
 
   Item({
     required this.name,
