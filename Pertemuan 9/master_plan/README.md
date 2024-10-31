@@ -76,3 +76,64 @@ Pada langkah 3, `completedCount` menghitung jumlah tugas yang telah diselesaikan
 4. Lakukan capture hasil dari Langkah 9 berupa GIF, kemudian jelaskan apa yang telah Anda buat!  
 ![](images/tugas2_1.gif)  
 Kode yang telah dibuat adalah implementasi dari `PlanScreen`, sebuah layar dalam aplikasi Flutter untuk mengelola daftar tugas. Ini menggunakan `StatefulWidget` dengan `ScrollController` untuk mengelola perilaku gulir. Dalam `build`, `ValueListenableBuilder` digunakan untuk mendengarkan perubahan pada objek `Plan`, menampilkan daftar tugas dalam `ListView`. Terdapat tombol untuk menambahkan tugas baru dan widget `ListTile` untuk setiap tugas yang memungkinkan pengguna menandai tugas sebagai selesai atau mengedit deskripsi. Metode `dispose` digunakan untuk membersihkan `scrollController` saat widget dihapus, mencegah kebocoran memori.  
+
+
+## Praktikum 3
+### Langkah 1
+![alt text](images/prak3_1.png)  
+### Langkah 2
+![alt text](images/prak3_2.png)  
+![alt text](images/prak3_2(2).png)
+### Langkah 3
+![alt text](images/prak3_3.png)  
+### Langkah 4
+Itu akan terjadi error setiap kali memanggil PlanProvider.of(context). Itu terjadi karena screen saat ini hanya menerima tugas-tugas untuk satu kelompok Plan, tapi sekarang PlanProvider menjadi list dari objek plan tersebut.
+### Langkah 5
+![alt text](images/prak3_5.png)
+### Langkah 6
+![alt text](images/prak3_6.png)
+### Langakh 7
+![alt text](images/prak3_7.png)  
+### Langkah 8
+![alt text](images/prak3_8.png)
+### Langkah 9  
+![alt text](images/prak3_9.png)
+### Langkah 10
+![alt text](images/prak3_10.png)  
+### Langkah 11
+![alt text](images/prak3_11.png)
+### Langkah 12
+![alt text](images/prak3_12.png)
+### Langkah 13
+![alt text](images/prak3_13.png)
+### Langkah 14
+![alt text](images/prak3_14.png)  
+![](images/prak3_14(2).gif)
+
+## Tugas Praktikum 3
+1. Selesaikan langkah-langkah praktikum tersebut, lalu dokumentasikan berupa GIF hasil akhir praktikum beserta penjelasannya di file README.md! Jika Anda menemukan ada yang error atau tidak berjalan dengan baik, silakan diperbaiki sesuai dengan tujuan aplikasi tersebut dibuat.  
+![](images/prak3_14(2).gif)  
+2. Berdasarkan Praktikum 3 yang telah Anda lakukan, jelaskan maksud dari gambar diagram berikut ini!  
+Gambar diagram tersebut menunjukkan alur navigasi dan struktur hierarki widget dalam aplikasi Flutter yang melibatkan dua layar utama: `PlanCreatorScreen` dan `PlanScreen`.
+
+a. **Bagian Kiri - `PlanCreatorScreen`**: 
+   - Struktur ini dimulai dari `MaterialApp`, yang menjadi root aplikasi Flutter.
+   - `PlanProvider` adalah widget yang menyediakan data untuk widget di bawahnya, termasuk `PlanCreatorScreen`.
+   - `PlanCreatorScreen` menggunakan widget `Column` yang berisi `TextField` dan `Expanded`.
+   - Di dalam `Expanded`, terdapat `ListView`, yang digunakan untuk menampilkan daftar item atau komponen yang bisa di-scroll.
+
+b. **Navigasi `Navigator Push`**:
+   - `Navigator Push` menunjukkan transisi dari layar `PlanCreatorScreen` ke layar `PlanScreen` ketika pengguna berinteraksi dengan tombol atau aksi tertentu.
+   - Ini adalah fungsi navigasi yang memungkinkan pengguna berpindah layar dalam aplikasi.
+
+c. **Bagian Kanan - `PlanScreen`**:
+   - Sama seperti `PlanCreatorScreen`, layar ini diawali dengan `MaterialApp` dan `PlanProvider`.
+   - `PlanScreen` menggunakan widget `Scaffold` untuk memberikan struktur dasar layar, seperti app bar dan body.
+   - `Column` di dalamnya mengatur tata letak `Expanded` dan `SafeArea`.
+   - `Expanded` berisi `ListView`, dan `SafeArea` berisi `Text`, yang kemungkinan digunakan untuk menampilkan informasi atau status.
+
+Diagram ini menggambarkan alur navigasi dan struktur dari dua layar dalam aplikasi Flutter. `PlanCreatorScreen` adalah layar pertama untuk membuat rencana, sedangkan `PlanScreen` adalah layar kedua yang menampilkan detail rencana. Navigasi dilakukan menggunakan `Navigator Push`, yang memungkinkan perpindahan antara kedua layar ini.  
+
+3. Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!  
+![](images/prak3_14(2).gif)  
+Fungsi `_buildMasterPlans()` menampilkan daftar rencana (plans) dalam aplikasi Flutter. Jika daftar rencana kosong, ditampilkan pesan "Anda belum memiliki rencana apapun" bersama ikon, menunjukkan bahwa pengguna belum membuat rencana. Namun, jika terdapat rencana, daftar ditampilkan dalam bentuk `ListView` dengan setiap rencana sebagai `ListTile` yang memuat nama dan status kelengkapan rencana. Ketika pengguna memilih salah satu rencana, aplikasi akan berpindah ke layar `PlanScreen` yang menampilkan detail dari rencana tersebut.
