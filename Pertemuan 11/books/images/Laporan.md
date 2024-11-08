@@ -26,3 +26,18 @@ Carilah judul buku favorit Anda di Google Books, lalu ganti ID buku pada variabe
 ![](image-6.gif)
 
 
+# Praktikum 2 : Menggunakan await/async untuk menghindari callbacks 
+## Langkah 1  
+![alt text](image-6.png)
+## Langkah 2  
+![alt text](image-7.png)  
+## Langkah 3  
+![alt text](image-8.png)  
+## Langkah 4  
+### Soal 4
+- Jelaskan maksud kode langkah 1 dan 2 tersebut!  
+Fungsi `count()` adalah fungsi asinkron yang menghitung total angka dengan memanggil tiga fungsi asinkron secara berurutan, masing-masing menunggu selama 3 detik sebelum mengembalikan angka 1, 2, dan 3. Setelah menunggu dan menambahkan hasil dari ketiga fungsi tersebut, total dihitung menjadi 6. Kemudian, `setState()` dipanggil untuk memperbarui variabel `result` dan memperbarui UI. Proses ini membutuhkan total waktu tunggu sekitar 9 detik.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 4".  
+![](image-9.gif)  
+
+
