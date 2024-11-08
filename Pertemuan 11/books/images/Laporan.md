@@ -41,3 +41,24 @@ Fungsi `count()` adalah fungsi asinkron yang menghitung total angka dengan meman
 ![](image-9.gif)  
 
 
+# Praktikum 3 : Menggunakan Completer di Future 
+## Langkah 1
+![alt text](image-9.png)
+## Langkah 2  
+![alt text](image-10.png)
+## Langkah 3  
+![alt text](image-11.png)
+## Langkah 4  
+### Soal 5  
+- Jelaskan maksud kode langkah 2 tersebut!  
+Pada **langkah 2**, kode `completer = Completer<int>();` mendefinisikan sebuah objek `Completer` dengan tipe data `int`. Objek ini bertindak sebagai pengendali untuk menyelesaikan (complete) atau membatalkan sebuah `Future`. `Completer` memungkinkan pembuatan `Future` yang dapat dikontrol secara manual, di mana hasil `Future` tersebut akan diselesaikan menggunakan metode `complete`.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 5".  
+![](image-12.gif)  
+## Langkah 5  
+![alt text](image-12.png)  
+## Langkah 6  
+### Soal 6
+- Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!  
+Langkah 2 menginisialisasi objek `Completer` untuk mengontrol hasil `Future`, sementara langkah 5-6 melibatkan penyelesaian `Future` dan penanganan hasilnya. Di langkah 5, fungsi `calculate()` menyelesaikan `Future` dengan nilai 42 setelah penundaan 5 detik atau menangkap error dan menyelesaikannya dengan `completeError`. Langkah 6 menggunakan `then` untuk memperbarui UI dengan hasil jika berhasil, atau `catchError` untuk menangani dan menampilkan pesan error jika terjadi kesalahan.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 6".
+![](image-13.gif)
