@@ -61,4 +61,23 @@ Pada **langkah 2**, kode `completer = Completer<int>();` mendefinisikan sebuah o
 - Jelaskan maksud perbedaan kode langkah 2 dengan langkah 5-6 tersebut!  
 Langkah 2 menginisialisasi objek `Completer` untuk mengontrol hasil `Future`, sementara langkah 5-6 melibatkan penyelesaian `Future` dan penanganan hasilnya. Di langkah 5, fungsi `calculate()` menyelesaikan `Future` dengan nilai 42 setelah penundaan 5 detik atau menangkap error dan menyelesaikannya dengan `completeError`. Langkah 6 menggunakan `then` untuk memperbarui UI dengan hasil jika berhasil, atau `catchError` untuk menangani dan menampilkan pesan error jika terjadi kesalahan.
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 6".
-![](image-13.gif)
+![](image-13.gif)  
+
+# Praktikum 4 : Memanggil Future secara paralel  
+## Langkah 1  
+![alt text](image-13.png)
+## Langkah 2
+![alt text](image-14.png)
+## Langkah 3
+### Soal 7
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 7".  
+![](image-15.gif)  
+## Langkah 4  
+![](image-16.gif)
+### Soal 8
+Jelaskan maksud perbedaan kode langkah 1 dan 4!  
+Perbedaan antara **langkah 1** dan **langkah 4** terletak pada pendekatan yang digunakan untuk menunggu beberapa `Future` selesai secara paralel:
+
+- **Langkah 1 (FutureGroup)**: Menggunakan `FutureGroup` dari paket `async` untuk mengelompokkan dan mengelola beberapa `Future`. Anda menambahkan setiap `Future` ke dalam `FutureGroup`, menutup grup, dan menunggu semua `Future` selesai sebelum memproses hasilnya. Pendekatan ini berguna jika Anda ingin memiliki kontrol lebih dalam mengelola `Future` sebelum menutup grup.
+
+- **Langkah 4 (Future.wait)**: Menggunakan `Future.wait`, sebuah metode bawaan dalam Dart yang menjalankan semua `Future` dalam daftar secara paralel dan menghasilkan hasilnya dalam daftar setelah semuanya selesai. Ini adalah pendekatan yang lebih sederhana dan lebih langsung untuk menunggu beberapa `Future` secara bersamaan.
