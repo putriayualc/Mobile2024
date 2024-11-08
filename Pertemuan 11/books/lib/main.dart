@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 
 void main() {
@@ -36,13 +37,31 @@ class _FuturePageState extends State<FuturePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Back from the Future'),
+        title: const Text('Back from the Future Putri'),
       ),
       body: Center(
         child: Column(
           children: [
             const Spacer(),
-            ElevatedButton(onPressed: () {}, child: const Text('GO!')),
+            ElevatedButton(
+              child: Text('GO!'),
+              onPressed: (){
+                setState(() {
+                  
+                });
+                getData().then((value){
+                  result = value.body.toString().substring(0,450);
+                  setState(() {
+                    
+                  });
+                }).catchError((_){
+                  result = 'An error occured';
+                  setState(() {
+                    
+                  });
+                });
+              },
+            ),
             const Spacer(),
             Text(result),
             const Spacer(),
@@ -54,7 +73,7 @@ class _FuturePageState extends State<FuturePage> {
     );
   }
 
-  Future<http.Response> getData() async{
+  Future<Response> getData() async{
     const authority = 'www.googleapis.com';
     const path = '/books/v1/volumes/-F_lEAAAQBAJ';
     Uri url = Uri.https(authority,path);
