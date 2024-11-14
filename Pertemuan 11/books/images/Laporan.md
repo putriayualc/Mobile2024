@@ -176,4 +176,25 @@ Ketika mengklik tombol `red`, `green`, `blue`, warna yang dipilih (merah, hijau,
 - Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!  
 ![alt text](image-41.png)
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 16".  
-![](image-42.gif)
+![](image-42.gif)  
+
+# Praktikum 9: Memanfaatkan async/await dengan Widget Dialog  
+## Langkah 1  
+![alt text](image-42.png)  
+## Langkah 2
+![alt text](image-43.png)  
+## Langkah 3
+![alt text](image-44.png)  
+## Langkah 4
+![alt text](image-45.png)
+## Langkah 5
+![alt text](image-46.png)
+## Langkah 6
+![](image-46.gif)
+### Soal 17
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?  
+Ketika mengklik salah satu tombol ("Red," "Green," atau "Blue") dalam dialog, warna latar belakang layar utama berubah sesuai dengan pilihan , dan dialog ditutup. Ini terjadi karena tombol memanggil fungsi `onPressed`, yang mengubah nilai `color` ke warna yang dipilih, lalu menutup dialog dengan `Navigator.pop`. Setelah dialog ditutup, `setState()` dipanggil untuk memperbarui UI, yang membuat latar belakang layar berubah ke warna baru yang dipilih.
+- Gantilah 3 warna pada langkah 3 dengan warna favorit Anda!  
+![alt text](image-47.png)
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 17".  
+![](image-47.gif)
