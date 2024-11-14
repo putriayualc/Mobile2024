@@ -98,4 +98,50 @@ Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan co
 ### Soal 10  
 Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!  
 ![alt text](image-20.png)  
-Pendekatan pertama menggunakan *callback chaining* dengan `then`, `catchError`, dan `whenComplete`, yang dapat membuat kode *asynchronous* lebih kompleks dan sulit dibaca. Sebaliknya, pendekatan kedua dengan `async/await` menyederhanakan pengelolaan *future* dan menjadikannya lebih mudah dibaca, menyerupai kode sinkron. Saat tombol ditekan dan `handleError()` dijalankan, kesalahan dari `returnError()` akan ditangani dalam blok `catch`, dan "Complete" akan tetap dicetak, terlepas dari hasilnya. Pendekatan `async/await` umumnya lebih direkomendasikan untuk kejelasan kode.
+Pendekatan pertama menggunakan *callback chaining* dengan `then`, `catchError`, dan `whenComplete`, yang dapat membuat kode *asynchronous* lebih kompleks dan sulit dibaca. Sebaliknya, pendekatan kedua dengan `async/await` menyederhanakan pengelolaan *future* dan menjadikannya lebih mudah dibaca, menyerupai kode sinkron. Saat tombol ditekan dan `handleError()` dijalankan, kesalahan dari `returnError()` akan ditangani dalam blok `catch`, dan "Complete" akan tetap dicetak, terlepas dari hasilnya. Pendekatan `async/await` umumnya lebih direkomendasikan untuk kejelasan kode.  
+
+# Praktikum 6 : Menggunakan Future dengan StatefulWidget  
+## Langkah 1  
+![alt text](image-21.png)  
+## Langkah 2  
+![alt text](image-22.png)  
+## Langkah 3  
+![alt text](image-23.png)  
+## Langkah 4  
+![alt text](image-25.png)
+## Langkah 5  
+### Soal 11 
+Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+![alt text](image-24.png)  
+## Langkah 6  
+![alt text](image-26.png)  
+## Langkah 7  
+![](image-27.png)
+## Langkah 8  
+![alt text](image-28.png)
+### Soal 12  
+- Jika Anda tidak melihat animasi loading tampil, kemungkinan itu berjalan sangat cepat. Tambahkan delay pada method getPosition() dengan kode await Future.delayed(const Duration(seconds: 3));
+- Apakah Anda mendapatkan koordinat GPS ketika run di browser? Mengapa demikian?  
+Disini saya mendapatkan koordinat GPS meskipun di run di browser.  
+![alt text](image-29.png)
+Namun ada kemungkinan tidak akan mendapatkan koordinat GPS yang valid ketika menjalankan aplikasi ini di browser. Ini karena plugin geolocator memiliki keterbatasan pada platform web. Untuk mendapatkan koordinat GPS yang valid, sebaiknya menjalankan aplikasi di perangkat fisik seperti ponsel atau tablet.  
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 12".  
+![](image-29.gif)
+
+# Praktikum 7: Manajemen Future dengan FutureBuilder  
+## Langkah 1  
+## Langkah 2  
+## Langkah 3  
+## Langkah 4
+### Soal 13
+- Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 13".
+- Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.  
+## Langkah 5
+### Soal 14  
+- Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 14".
+
+# Praktikum 8: Navigation route dengan Future Function  
+## Langkah 1
+## Langkah 2
