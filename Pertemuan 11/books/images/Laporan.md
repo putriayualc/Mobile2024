@@ -80,4 +80,22 @@ Perbedaan antara **langkah 1** dan **langkah 4** terletak pada pendekatan yang d
 
 - **Langkah 1 (FutureGroup)**: Menggunakan `FutureGroup` dari paket `async` untuk mengelompokkan dan mengelola beberapa `Future`. Anda menambahkan setiap `Future` ke dalam `FutureGroup`, menutup grup, dan menunggu semua `Future` selesai sebelum memproses hasilnya. Pendekatan ini berguna jika Anda ingin memiliki kontrol lebih dalam mengelola `Future` sebelum menutup grup.
 
-- **Langkah 4 (Future.wait)**: Menggunakan `Future.wait`, sebuah metode bawaan dalam Dart yang menjalankan semua `Future` dalam daftar secara paralel dan menghasilkan hasilnya dalam daftar setelah semuanya selesai. Ini adalah pendekatan yang lebih sederhana dan lebih langsung untuk menunggu beberapa `Future` secara bersamaan.
+- **Langkah 4 (Future.wait)**: Menggunakan `Future.wait`, sebuah metode bawaan dalam Dart yang menjalankan semua `Future` dalam daftar secara paralel dan menghasilkan hasilnya dalam daftar setelah semuanya selesai. Ini adalah pendekatan yang lebih sederhana dan lebih langsung untuk menunggu beberapa `Future` secara bersamaan.  
+
+# Praktikum 5 : Menangani Respon Error pada Async Code  
+## Langkah 1  
+![alt text](image-15.png)
+## Langkah 2
+![alt text](image-16.png)
+## Langkah 3  
+![alt text](image-17.png)  
+![alt text](image-18.png)
+### Soal 9  
+Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W12: Soal 9".  
+![](image-18.gif)   
+## Langkah 4  
+![alt text](image-19.png)  
+### Soal 10  
+Panggil method handleError() tersebut di ElevatedButton, lalu run. Apa hasilnya? Jelaskan perbedaan kode langkah 1 dan 4!  
+![alt text](image-20.png)  
+Pendekatan pertama menggunakan *callback chaining* dengan `then`, `catchError`, dan `whenComplete`, yang dapat membuat kode *asynchronous* lebih kompleks dan sulit dibaca. Sebaliknya, pendekatan kedua dengan `async/await` menyederhanakan pengelolaan *future* dan menjadikannya lebih mudah dibaca, menyerupai kode sinkron. Saat tombol ditekan dan `handleError()` dijalankan, kesalahan dari `returnError()` akan ditangani dalam blok `catch`, dan "Complete" akan tetap dicetak, terlepas dari hasilnya. Pendekatan `async/await` umumnya lebih direkomendasikan untuk kejelasan kode.
