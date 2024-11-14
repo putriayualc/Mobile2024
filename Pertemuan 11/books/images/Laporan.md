@@ -152,5 +152,28 @@ Jika terjadi kesalahan saat mencoba mendapatkan data lokasi (misalnya, jika izin
 ![](image-34.gif) 
 
 # Praktikum 8: Navigation route dengan Future Function  
-## Langkah 1
-## Langkah 2
+## Langkah 1  
+![alt text](image-35.png)
+## Langkah 2  
+### Soal 15
+- Tambahkan nama panggilan Anda pada tiap properti title sebagai identitas pekerjaan Anda.
+- Silakan ganti dengan warna tema favorit Anda.  
+![alt text](image-36.png)
+## Langkah 3  
+![alt text](image-37.png)  
+## Langkah 4  
+![alt text](image-38.png)
+## Langkah 5
+![alt text](image-39.png)
+## Langkah 6
+![alt text](image-40.png)
+## Langkah 8  
+![](image-41.gif)
+### Soal 16  
+- Cobalah klik setiap button, apa yang terjadi ? Mengapa demikian ?  
+Ketika mengklik tombol "Change Color" di NavigationFirst, layar NavigationSecond akan terbuka. Setelah memilih warna di NavigationSecond, maka akan kembali ke NavigationFirst dengan latar belakang yang diperbarui sesuai dengan warna yang dipilih.
+Ketika mengklik tombol `red`, `green`, `blue`, warna yang dipilih (merah, hijau, atau biru) dikirim kembali ke layar sebelumnya, dan layar `NavigationSecond` ditutup. Ini terjadi karena `Navigator.pop(context, color)` menutup layar saat ini dan mengembalikan warna yang dipilih ke layar pemanggil.
+- Gantilah 3 warna pada langkah 5 dengan warna favorit Anda!  
+![alt text](image-41.png)
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 16".  
+![](image-42.gif)
