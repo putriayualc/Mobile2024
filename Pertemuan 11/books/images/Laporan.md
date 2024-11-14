@@ -130,17 +130,26 @@ Namun ada kemungkinan tidak akan mendapatkan koordinat GPS yang valid ketika men
 
 # Praktikum 7: Manajemen Future dengan FutureBuilder  
 ## Langkah 1  
+![alt text](image-30.png)
 ## Langkah 2  
+![alt text](image-31.png)
 ## Langkah 3  
+![alt text](image-32.png)
 ## Langkah 4
+![alt text](image-33.png)
 ### Soal 13
-- Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?
-- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 13".
+- Apakah ada perbedaan UI dengan praktikum sebelumnya? Mengapa demikian?  
+Perbedaannya adalah dengan `FutureBuilder`, UI secara otomatis diperbarui berdasarkan status *future*, menampilkan `CircularProgressIndicator` saat data masih dimuat dan koordinat setelahnya. Ini membuat kode lebih bersih dan responsif dibandingkan dengan pendekatan sebelumnya yang memerlukan pembaruan manual menggunakan `setState`.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 13".  
+![](image-33.gif)
 - Seperti yang Anda lihat, menggunakan FutureBuilder lebih efisien, clean, dan reactive dengan Future bersama UI.  
-## Langkah 5
+## Langkah 5  
+![alt text](image-34.png)
 ### Soal 14  
-- Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?
-- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 14".
+- Apakah ada perbedaan UI dengan langkah sebelumnya? Mengapa demikian?  
+Jika terjadi kesalahan saat mencoba mendapatkan data lokasi (misalnya, jika izin ditolak atau layanan lokasi tidak tersedia), UI sekarang akan menampilkan pesan "Something terrible happened!" sebagai ganti dari hanya menampilkan teks kosong. Sebelumnya, jika ada kesalahan, UI tidak menampilkan pesan yang menjelaskan apa yang salah.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README. Lalu lakukan commit dengan pesan "W11: Soal 14".  
+![](image-34.gif) 
 
 # Praktikum 8: Navigation route dengan Future Function  
 ## Langkah 1
