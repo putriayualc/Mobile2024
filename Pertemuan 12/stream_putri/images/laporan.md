@@ -98,3 +98,20 @@ Kode tersebut mendefinisikan sebuah kelas bernama `Colorstream` yang menghasilka
 - Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.
 ![alt text](image-29.png)
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 7".
+
+# Praktikum 3
+## Langkah 1  
+![alt text](image-30.png)  
+## Langkah 2  
+![alt text](image-31.png)  
+## Langkah 3  
+![alt text](image-32.png)  
+## Langkah 4
+### Soal 8
+- Jelaskan maksud kode langkah 1-3 tersebut!  
+    - **Langkah 1**: Mendeklarasikan variabel `transformer` bertipe `StreamTransformer<int, int>` untuk memodifikasi data stream.
+    - **Langkah 2**: Menginisialisasi `transformer` dengan callback untuk mengalikan data dengan 10, menangani error dengan mengirim `-1`, dan menutup sink saat selesai.
+    - **Langkah 3**: Menerapkan `transformer` pada stream dan mendengarkan data. Data yang diproses diperbarui di UI, dan error mengubah nilai `lastNumber` menjadi `-1`.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+![](image-32.gif)
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 8".
