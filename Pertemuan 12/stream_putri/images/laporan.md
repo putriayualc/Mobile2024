@@ -51,4 +51,37 @@ Kode tersebut mendefinisikan sebuah kelas bernama `Colorstream` yang menghasilka
 ### Soal 5  
 - Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !  
 `await for` menunggu dan memproses setiap elemen dari `Stream` satu per satu secara sinkron dalam fungsi `async`, sementara `listen` menangani elemen secara real-time dengan callback, tanpa menunggu, dan tidak memblokir eksekusi program.
-- Lakukan commit hasil jawaban Soal 5 dengan pesan "W13: Jawaban Soal 5"
+- Lakukan commit hasil jawaban Soal 5 dengan pesan "W13: Jawaban Soal 5"  
+
+# Praktikum 2  
+## Langkah 1  
+![alt text](image-15.png)  
+## Langkah 2  
+![alt text](image-16.png)
+## Langkah 3  
+![alt text](image-17.png)  
+## Langkah 4  
+![alt text](image-18.png)  
+## Langkah 5  
+![alt text](image-19.png)  
+## Langkah 6  
+![alt text](image-20.png)  
+## Langkah 7  
+![alt text](image-21.png)  
+## Langkah 8  
+![alt text](image-22.png)
+## Langkah 9  
+![alt text](image-23.png)
+## Langkah 10  
+![alt text](image-24.png)  
+## Langkah 11  
+![alt text](image-25.png)  
+## Langkah 12  
+### Soal 6  
+- Jelaskan maksud kode langkah 8 dan 10 tersebut!  
+    - **Langkah 8**: `initState()` menginisialisasi `numberStream` dan mendengarkan data dari `Stream`. Setiap kali data baru diterima, `setState()` dipanggil untuk memperbarui `lastNumber` dan memperbarui UI.
+    - **Langkah 10**: `addRandomNumber()` menghasilkan angka acak dari 0 hingga 9 dan menambahkannya ke `Stream`, yang memicu pembaruan UI dengan angka baru.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+    ![](image-26.gif)
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 6".
+##
