@@ -45,4 +45,10 @@ Kode tersebut mendefinisikan sebuah kelas bernama `Colorstream` yang menghasilka
 ### Soal 4
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.  
 ![](image-13.gif)
-- Lakukan commit hasil jawaban Soal 4 dengan pesan "W13: Jawaban Soal 4"
+- Lakukan commit hasil jawaban Soal 4 dengan pesan "W13: Jawaban Soal 4"  
+## Langkah 13  
+![alt text](image-14.png)  
+### Soal 5  
+- Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !  
+`await for` menunggu dan memproses setiap elemen dari `Stream` satu per satu secara sinkron dalam fungsi `async`, sementara `listen` menangani elemen secara real-time dengan callback, tanpa menunggu, dan tidak memblokir eksekusi program.
+- Lakukan commit hasil jawaban Soal 5 dengan pesan "W13: Jawaban Soal 5"
