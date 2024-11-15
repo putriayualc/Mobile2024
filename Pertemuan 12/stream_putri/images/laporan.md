@@ -84,4 +84,17 @@ Kode tersebut mendefinisikan sebuah kelas bernama `Colorstream` yang menghasilka
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
     ![](image-26.gif)
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 6".
-##
+## Langlah 13
+![alt text](image-26.png)  
+## Langkah 14
+![alt text](image-27.png)  
+## Langkah 15
+![alt text](image-28.png)
+### Soal 7
+- Jelaskan maksud kode langkah 13 sampai 15 tersebut!
+    - **Langkah 13**: `addError()` mengirimkan error ke `Stream` menggunakan `controller.sink.addError('error')`.
+    - **Langkah 14**: `onError()` menangani error dari `Stream` dan mengubah `lastNumber` menjadi `-1` jika terjadi error.
+    - **Langkah 15**: `addRandomNumber()` memanggil `addError()` untuk memicu error dalam `Stream`, yang kemudian ditangani di `initState()`.
+- Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.
+![alt text](image-29.png)
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 7".
