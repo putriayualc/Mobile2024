@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Colorstream {
+class ColorStream {
   final List<Color> colors = [
     Colors.blueGrey,
     Colors.amber,

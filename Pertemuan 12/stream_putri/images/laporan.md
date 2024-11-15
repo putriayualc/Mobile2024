@@ -30,4 +30,19 @@ NIM   : 2241720132
 Keyword `yield*` dalam kode tersebut digunakan untuk menyalurkan atau mendelegasikan semua elemen dari `Stream` lain ke `Stream` yang sedang didefinisikan. Dalam konteks ini, `yield* Stream.periodic(...)` memungkinkan semua elemen yang dihasilkan oleh `Stream.periodic`, yang menghasilkan elemen setiap satu detik, untuk diteruskan secara langsung ke `Stream` dari fungsi `getColors`. Ini memastikan bahwa warna-warna dari daftar `colors` dipancarkan secara berurutan dalam interval satu detik, tanpa perlu menangani elemen satu per satu secara manual.
 - Apa maksud isi perintah kode tersebut?  
 Kode tersebut mendefinisikan sebuah kelas bernama `Colorstream` yang menghasilkan aliran (stream) warna secara berkala. Kelas ini memiliki daftar warna (`colors`), yang mencakup berbagai warna seperti `Colors.blueGrey`, `Colors.amber`, dan sebagainya. Fungsi `getColors()` menggunakan sebuah `Stream` untuk menghasilkan warna-warna dari daftar tersebut secara berurutan dalam interval waktu satu detik. Dengan menggunakan `Stream.periodic`, setiap detik warna yang berbeda dari daftar akan dihasilkan, dan indeks warna diatur dengan `t % colors.length` untuk mengulang warna secara siklis saat mencapai akhir daftar.
-- Lakukan commit hasil jawaban Soal 3 dengan pesan "W13: Jawaban Soal 3"
+- Lakukan commit hasil jawaban Soal 3 dengan pesan "W13: Jawaban Soal 3"  
+## Langakh 7  
+![alt text](image-9.png)  
+## Langkah 8  
+![alt text](image-10.png)
+## Langkah 9  
+![alt text](image-11.png)  
+## Langkah 10  
+![alt text](image-12.png)  
+## Langkah 11  
+![alt text](image-13.png)
+## Langkah 12  
+### Soal 4
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.  
+![](image-13.gif)
+- Lakukan commit hasil jawaban Soal 4 dengan pesan "W13: Jawaban Soal 4"
