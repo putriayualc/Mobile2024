@@ -115,3 +115,37 @@ Kode tersebut mendefinisikan sebuah kelas bernama `Colorstream` yang menghasilka
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 ![](image-32.gif)
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 8".
+
+# Praktikum 4
+## Langkah 1
+![alt text](image-33.png)
+## Langkah 2
+![alt text](image-34.png)
+## Langkah 3
+![alt text](image-35.png)
+## Langkah 4
+![alt text](image-36.png)
+## Langkah 5
+![alt text](image-37.png)
+## Langkah 6
+![alt text](image-38.png)
+## Langkah 7
+![alt text](image-39.png)
+## Langkah 8
+![alt text](image-40.png)
+## Langkah 9
+![](image-41.gif)
+## Langkah 10
+![alt text](image-41.png)
+### Soal 9 
+- Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
+    - langkah 2  
+    bagian dari inisialisasi aliran data (stream) di Flutter, digunakan untuk menghubungkan data real-time dengan antarmuka pengguna. Fungsi initState memulai stream melalui instance NumberStream, yang menghasilkan aliran data menggunakan StreamController. Widget berlangganan ke stream dengan metode listen(), sehingga setiap kali ada data baru yang dipancarkan, callback akan dipanggil untuk memperbarui nilai lastNumber melalui setState. Hal ini memungkinkan UI untuk secara otomatis memperbarui sesuai dengan perubahan data. Akhirnya, super.initState() memastikan lifecycle widget tetap berjalan dengan benar.
+    - langkah 6  
+    `subscription.cancel();` digunakan untuk menghentikan langganan ke stream, sehingga widget tidak lagi menerima data baru. Ini penting untuk mencegah kebocoran memori dan biasanya dipanggil di metode `dispose()` untuk membersihkan sumber daya sebelum widget dihancurkan.
+    - langkah 8  
+    Fungsi `addRandomNumber()` menghasilkan angka acak dari 0 hingga 9 menggunakan kelas `Random` dan mencoba menambahkan angka tersebut ke stream melalui `addNumberToSink()`. Sebelum menambahkan, fungsi memeriksa apakah `numberStreamController` masih terbuka menggunakan `isClosed`. Jika controller masih terbuka, angka ditambahkan ke stream; jika tidak, nilai `lastNumber` diatur ke `-1` menggunakan `setState` untuk mencerminkan bahwa stream sudah ditutup. Fungsi ini memastikan penanganan kondisi ketika stream tidak lagi aktif.
+
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.  
+![](image-41.gif)
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 9".
