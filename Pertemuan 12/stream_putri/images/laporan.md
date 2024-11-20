@@ -149,3 +149,26 @@ Kode tersebut mendefinisikan sebuah kelas bernama `Colorstream` yang menghasilka
 - Capture hasil praktikum Anda berupa GIF dan lampirkan di README.  
 ![](image-41.gif)
 - Lalu lakukan commit dengan pesan "W13: Jawaban Soal 9".
+
+# Praktikum 5
+## Langkah 1
+![alt text](image-42.png)
+## Langkah 2
+![alt text](image-43.png)
+## Langkah 3
+![alt text](image-44.png)
+### Soal 10  
+- Jelaskan mengapa error itu bisa terjadi ?  
+    Error terjadi karena stream yang digunakan adalah **single-subscription stream**, yang hanya mendukung satu listener pada satu waktu. Ketika Anda mencoba menambahkan listener kedua menggunakan `stream.listen()`, Flutter memunculkan error **"Bad state: Stream has already been listened to."** untuk mencegah konflik data. Untuk memperbaikinya, ubah stream menjadi **broadcast stream** dengan `asBroadcastStream()`, atau pastikan hanya ada satu listener pada stream tersebut.
+## Langkah 4
+![alt text](image-45.png)
+## Langkah 5  
+![alt text](image-46.png)
+## Langkah 6
+![](image-47.gif)
+### Soal 11
+- Jelaskan mengapa hal itu bisa terjadi ?  
+    Hal ini terjadi karena terdapat **dua listener** (`subscription` dan `subscription2`) yang aktif mendengarkan stream yang sama. Ketika tombol "New Random Number" ditekan, stream memancarkan angka baru, dan kedua listener menerima angka tersebut secara bersamaan. Karena kedua listener memiliki callback yang sama untuk memperbarui variabel `values`, angka ditambahkan dua kali ke teks yang ditampilkan. Ini diperbolehkan karena stream diubah menjadi **broadcast stream** menggunakan `asBroadcastStream()`, yang memungkinkan banyak listener mendengarkan aliran yang sama. Akibatnya, setiap angka yang dipancarkan diproses dua kali, sehingga teks angka terus bertambah sebanyak dua kali.
+- Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+    ![](image-47.gif)
+- Lalu lakukan commit dengan pesan "W13: Jawaban Soal 10,11".
