@@ -8,6 +8,8 @@ import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 import 'package:async/async.dart';
 
+import 'package:shared_preferences/shared_preferences.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -24,10 +26,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      // home: const FuturePage(),
+      home: const FuturePage(),
       // home: LocationScreen(),
       // home: const NavigationFirst(),
-      home: const NavigationDialogScreen(),
+      // home: const NavigationDialogScreen(),
     );
   }
 }
@@ -40,6 +42,7 @@ class FuturePage extends StatefulWidget {
 }
 
 class _FuturePageState extends State<FuturePage> {
+  int appCounter = 0;
   String result = '';
 
   late Completer completer;
@@ -69,21 +72,36 @@ class _FuturePageState extends State<FuturePage> {
         child: Column(
           children: [
             const Spacer(),
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text('You Have opened the app $appCounter times.'),
+                  ElevatedButton(
+                    onPressed: () {
+                      deletePreference();
+                    },
+                    child: const Text('Reset Counter'),
+                  ),
+                ],
+              ),
+            ),
+            const Spacer(),
             ElevatedButton(
               // Prak 5 langkah 2
-              
+
               child: Text('GO!'),
               onPressed: () {
                 handleError();
-              //   returnError().then((value){
-              //   setState(() {
-              //     result = 'Success';
-              //   });
-              // }).catchError((onError){
-              //   setState(() {
-              //     result = onError.toString();
-              //   });
-              // }).whenComplete(() => print('Complete'));
+                //   returnError().then((value){
+                //   setState(() {
+                //     result = 'Success';
+                //   });
+                // }).catchError((onError){
+                //   setState(() {
+                //     result = onError.toString();
+                //   });
+                // }).whenComplete(() => print('Complete'));
 
                 // setState(() {});
                 // getData().then((value) {
@@ -172,9 +190,9 @@ class _FuturePageState extends State<FuturePage> {
       returnTwoAsync(),
       returnThreeAsync(),
     ]);
-    futures.then((List <int> value){
+    futures.then((List<int> value) {
       int total = 0;
-      for (var element in value){
+      for (var element in value) {
         total += element;
       }
       setState(() {
@@ -191,14 +209,36 @@ class _FuturePageState extends State<FuturePage> {
   Future handleError() async {
     try {
       await returnError();
-    }
-    catch (error){
+    } catch (error) {
       setState(() {
         result = error.toString();
       });
-    }
-    finally {
+    } finally {
       print('Complete');
     }
   }
+
+  Future readAndWritePreference() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    appCounter = prefs.getInt('appCounter') ?? 0;
+    appCounter++;
+    await prefs.setInt('appCounter', appCounter);
+    setState(() {
+      appCounter = appCounter;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    readAndWritePreference();
+  }
+
+  Future deletePreference() async{
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.clear();
+    setState(() {
+      appCounter = 0;
+    });
+  } 
 }

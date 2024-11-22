@@ -47,3 +47,15 @@ NIM : 2241720132
 ![alt text](image-20.png)
 ## Langkah 22
 ![](image-21.png)
+
+# Praktikum 2
+## Langkah 1
+![alt text](image-22.png)
+## Langkah 2
+![alt text](image-23.png)
+## Langkah 3
+Metode ini mengubah objek List of Pizza kembali menjadi string Json dengan memanggil metode jsonEncode lagi di pustaka dart_convert.
+## Langkah 4
+![alt text](image-24.png)
+## Langkah 5
+![alt text](image-25.png)
