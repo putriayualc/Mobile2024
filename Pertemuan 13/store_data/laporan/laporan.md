@@ -59,3 +59,26 @@ Metode ini mengubah objek List of Pizza kembali menjadi string Json dengan meman
 ![alt text](image-24.png)
 ## Langkah 5
 ![alt text](image-25.png)
+
+
+
+
+# Praktikum 6
+## Langkah 1
+![alt text](image-26.png)
+## Langkah 2
+![alt text](image-27.png)
+## Langkah 3
+![alt text](image-28.png)
+## Langkah 4
+![alt text](image-29.png)
+## Langkah 5
+![alt text](image-30.png)
+## Langkah 6
+![alt text](image-31.png)
+## Langkah 7
+![alt text](image-32.png)
+## Langkah 8
+![alt text](image-33.png)
+## Langkah 9
+![](image-33)
