@@ -83,3 +83,16 @@ Absen : 21
 ## Langkah 11
 ![](image-36.gif)
 
+# Praktikum 4
+## Langkah 1
+![alt text](image-36.png)
+## Langkah 2
+![alt text](image-37.png)
+## Langkah 3
+![alt text](image-38.png)
+## Langkah 4
+![alt text](image-39.png)
+## Langkah 5
+![alt text](image-40.png)
+## Langkah 6
+![](image-40.gif)
