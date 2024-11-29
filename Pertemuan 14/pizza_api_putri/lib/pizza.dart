@@ -22,4 +22,12 @@ class Pizza {
     };
   }
 
+  // Unnamed constructor
+  Pizza({
+    required this.id,
+    required this.pizzaName,
+    required this.description,
+    required this.price,
+    required this.imageUrl,
+  });
 }
