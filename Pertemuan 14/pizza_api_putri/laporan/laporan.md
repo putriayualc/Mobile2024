@@ -58,3 +58,28 @@ Absen : 21
 ![alt text](image-25.png)
 ## Langkah 16
 ![alt text](image-26.png)
+
+# Praktikum 3
+## Langkah 1
+![alt text](image-27.png)
+## Langkah 2
+![alt text](image-28.png)
+## Langkah 3
+![alt text](image-29.png)
+## Langkah 4
+![alt text](image-30.png)
+## Langkah 5
+![alt text](image-31.png)
+## Langkah 6
+![alt text](image-32.png)
+## Langkah 7
+![alt text](image-33.png)
+## Langkah 8
+![alt text](image-34.png)
+## Langkah 9
+![alt text](image-35.png)
+## Langkah 10
+![](image-35.gif)
+## Langkah 11
+![](image-36.gif)
+

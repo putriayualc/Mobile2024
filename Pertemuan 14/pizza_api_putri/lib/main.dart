@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:pizza_api_putri/httphelper.dart';
 
 import './pizza.dart';
@@ -38,6 +37,7 @@ class _MyHomePage extends State<MyHomePage> {
     return pizzas;
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -47,10 +47,14 @@ class _MyHomePage extends State<MyHomePage> {
           future: callPizzas(),
           builder: (BuildContext context, AsyncSnapshot<List<Pizza>> snapshot) {
             if (snapshot.hasError) {
-              return const Text('Something went wrong');
+              return const Center(
+                child: Text('Something went wrong'),
+              );
             }
             if (!snapshot.hasData) {
-              return const CircularProgressIndicator();
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
             }
             return ListView.builder(
               itemCount: (snapshot.data == null) ? 0 : snapshot.data!.length,
@@ -60,6 +64,17 @@ class _MyHomePage extends State<MyHomePage> {
                   subtitle: Text(snapshot.data![position].description +
                       '- e ' +
                       snapshot.data![position].price.toString()),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PizzaDetailScreen(
+                          pizza: snapshot.data![position],
+                          isNew: false,
+                        ),
+                      ),
+                    );
+                  },
                 );
               },
             );
@@ -70,7 +85,16 @@ class _MyHomePage extends State<MyHomePage> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => const PizzaDetailScreen()),
+                  builder: (context) => PizzaDetailScreen(
+                        pizza: Pizza(
+                          id: 0, // Default ID
+                          pizzaName: '', // Nama kosong untuk pizza baru
+                          description: '', // Deskripsi kosong
+                          price: 0.0, // Harga default
+                          imageUrl: '', // URL gambar kosong
+                        ),
+                        isNew: true,
+                      )),
             );
           }),
     );
